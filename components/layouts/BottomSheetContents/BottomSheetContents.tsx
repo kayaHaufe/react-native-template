@@ -73,8 +73,7 @@ export default function BottomSheetContents({ onClose }: WelcomeBottomSheetConte
     <View style={[styles.root, isDark && { backgroundColor: colors.blackGray }]}>
       <Text style={[styles.title, isDark && { color: colors.gray }]}>🎉 Parabéns! </Text>
       <Text style={[styles.subtitle, { marginBottom: 32 }, isDark && { color: colors.gray }]}>
-        Projeto configurado com sucesso.
-        <Text style={{ fontFamily: fonts.openSan.bold }}>{` ${config.env} `}</Text>🚀
+        Projeto configurado com sucesso 🚀🚀
       </Text>
       <Text style={[styles.subtitle, { marginBottom: 8 }, isDark && { color: colors.gray }]}>
         Variáveis de Ambiente Injetáveis:
@@ -86,14 +85,14 @@ export default function BottomSheetContents({ onClose }: WelcomeBottomSheetConte
         </View>
       ))}
       <Text style={[styles.subtitle, { marginVertical: 32 }, isDark && { color: colors.gray }]}>
-        {`Boa programação!`}
+        {`Bora codar!`}
       </Text>
       <GradientButton
         title="OK"
         titleStyle={[styles.buttonTitle, isDark && { color: colors.blackGray }]}
         style={styles.button}
         gradientBackgroundProps={{
-          colors: [colors.purple, colors.pink],
+          colors: [colors.black, colors.magent],
           start: { x: 0, y: 1 },
           end: { x: 0.8, y: 0 },
         }}

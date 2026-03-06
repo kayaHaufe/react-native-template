@@ -43,7 +43,7 @@ export default function Details() {
         titleStyle={[styles.buttonTitle, isDark && { color: colors.blackGray }]}
         style={styles.button}
         gradientBackgroundProps={{
-          colors: [colors.purple, colors.pink],
+          colors: [colors.black, colors.magent],
           start: { x: 0, y: 1 },
           end: { x: 0.8, y: 0 },
         }}

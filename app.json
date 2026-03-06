@@ -1,12 +1,16 @@
 {
   "expo": {
-    "name": "react-native-boilerplate",
-    "slug": "react-native-boilerplate",
-    "scheme": "react-native-boilerplate",
+    "name": "react-native-template",
+    "slug": "react-native-template",
+    "scheme": "react-native-template",
     "version": "3.0.0",
     "owner": "wataru",
     "newArchEnabled": true,
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "orientation": "portrait",
     "icon": "./assets/images/logo-lg.png",
     "userInterfaceStyle": "automatic",

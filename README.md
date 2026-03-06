@@ -1,17 +1,17 @@
 <h1 align="center">
-  <img src='https://github.com/wataru-maeda/react-native-boilerplate/blob/main/__DELELE_ME__/banner.png' width='600'>
+  <img src='https://github.com/wataru-maeda/react-native-template/blob/main/__DELELE_ME__/banner.png' width='600'>
 </h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="React Native is released under the MIT license." />
-  <img src="https://github.com/wataru-maeda/react-native-boilerplate/actions/workflows/preview.yml/badge.svg" alt="" />
-  <img src="https://github.com/wataru-maeda/react-native-boilerplate/actions/workflows/test.yml/badge.svg" alt="" />
+  <img src="https://github.com/wataru-maeda/react-native-template/actions/workflows/preview.yml/badge.svg" alt="" />
+  <img src="https://github.com/wataru-maeda/react-native-template/actions/workflows/test.yml/badge.svg" alt="" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 </p>
 
 <p align="center">
-  <img src='https://github.com/wataru-maeda/react-native-boilerplate/blob/main/__DELELE_ME__/demo-light-theme.gif' width='150px'>
-  <img src='https://github.com/wataru-maeda/react-native-boilerplate/blob/main/__DELELE_ME__/demo-dark-theme.gif' width='150px'>
+  <img src='https://github.com/wataru-maeda/react-native-template/blob/main/__DELELE_ME__/demo-light-theme.gif' width='150px'>
+  <img src='https://github.com/wataru-maeda/react-native-template/blob/main/__DELELE_ME__/demo-dark-theme.gif' width='150px'>
 </p>
 
 Say goodbye to time-consuming setup tasks like restructuring files, installing libraries, and crafting reusable components. Our project boilerplate is your solution to eliminate redundant work when starting from scratch. Built with the latest Expo SDK 54, React 19.1, and modern development practices, it includes only the most commonly-used libraries, so you can hit the ground running with a fully configured setup.
@@ -77,16 +77,16 @@ Root (Drawer)
 This project uses [**Redux Toolkit**](https://redux-toolkit.js.org/) for global state management, pre-configured with Redux Hooks for immediate use. 
 
 #### Getting Started
-1. Explore existing slices in the [`/slices`](https://github.com/wataru-maeda/react-native-boilerplate/tree/main/slices) directory
-2. See usage examples in [`/app/_layout.tsx`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/app/_layout.tsx#L23)
+1. Explore existing slices in the [`/slices`](https://github.com/wataru-maeda/react-native-template/tree/main/slices) directory
+2. See usage examples in [`/app/_layout.tsx`](https://github.com/wataru-maeda/react-native-template/blob/main/app/_layout.tsx#L23)
 
 #### Adding New State
-1. Copy [`/slices/app.slice.ts`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/slices/app.slice.ts)
+1. Copy [`/slices/app.slice.ts`](https://github.com/wataru-maeda/react-native-template/blob/main/slices/app.slice.ts)
 2. Rename and modify for your needs
-3. Add your slice to [`/utils/store.ts`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/utils/store.ts#L10)
+3. Add your slice to [`/utils/store.ts`](https://github.com/wataru-maeda/react-native-template/blob/main/utils/store.ts#L10)
 
 #### Development
-Redux logger is enabled by default. To disable, remove the logger from [`/utils/store.ts`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/utils/store.ts#L13).
+Redux logger is enabled by default. To disable, remove the logger from [`/utils/store.ts`](https://github.com/wataru-maeda/react-native-template/blob/main/utils/store.ts#L13).
 
 </details>
 
@@ -95,7 +95,7 @@ Redux logger is enabled by default. To disable, remove the logger from [`/utils/
 
 ####
 
-The project simplifies asset and theme management through a centralized [`/theme`](https://github.com/wataru-maeda/react-native-boilerplate/tree/main/theme) directory that handles images, icons, fonts, and colors, with built-in asset preloading and SVG support for optimal performance, while also providing a custom `useColorScheme` hook (located in [`/hooks/useColorScheme.ts`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/hooks/useColorScheme.ts)) that automatically detects and adapts colors based on the current theme across both mobile and web platforms - making it easy to implement dynamic theming by returning the current color scheme name and flags (isDark, isLight) for conditional styling.
+The project simplifies asset and theme management through a centralized [`/theme`](https://github.com/wataru-maeda/react-native-template/tree/main/theme) directory that handles images, icons, fonts, and colors, with built-in asset preloading and SVG support for optimal performance, while also providing a custom `useColorScheme` hook (located in [`/hooks/useColorScheme.ts`](https://github.com/wataru-maeda/react-native-template/blob/main/hooks/useColorScheme.ts)) that automatically detects and adapts colors based on the current theme across both mobile and web platforms - making it easy to implement dynamic theming by returning the current color scheme name and flags (isDark, isLight) for conditional styling.
 
 </details>
 
@@ -112,17 +112,17 @@ The project uses [`dotenvx`](https://dotenvx.com/) to handle environment variabl
 #### Setup Structure
 - `.env.dev.example` - Development environment template
 - `.env.prod.example` - Production environment template
-- Configuration in [`app.config.ts`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/app.config.ts) and [`utils/config.ts`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/utils/config.ts)
+- Configuration in [`app.config.ts`](https://github.com/wataru-maeda/react-native-template/blob/main/app.config.ts) and [`utils/config.ts`](https://github.com/wataru-maeda/react-native-template/blob/main/utils/config.ts)
 
 #### Getting Started with Your Expo Account
 1. Rename `.env.dev.example` to `.env.dev`
-2. Update `owner` in [`app.json`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/app.json#L6) with your Expo username
+2. Update `owner` in [`app.json`](https://github.com/wataru-maeda/react-native-template/blob/main/app.json#L6) with your Expo username
 3. Set your `EXPO_SLUG` and `EXPO_PROJECT_ID` in `.env.dev`
 
 #### Adding New Environment Variables
 1. Add variables to both `.env.dev` and `.env.prod`
-2. Include them in `app.config.ts` under the [`extra`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/app.config.ts#L29) object
-3. Define them in [`utils/config.ts`](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/utils/config.ts#L6)
+2. Include them in `app.config.ts` under the [`extra`](https://github.com/wataru-maeda/react-native-template/blob/main/app.config.ts#L29) object
+3. Define them in [`utils/config.ts`](https://github.com/wataru-maeda/react-native-template/blob/main/utils/config.ts#L6)
 
 #### Verify Configuration
 - Check variables in the app's bottom sheet OR...
@@ -195,13 +195,13 @@ The project maintains code quality through integrated Eslint, Prettier, and Jest
 - When you've completed your work and need to share a preview with the QA team, our boilerplate automates the distribution process for you. Here's how it works:
 1. Whenever you create a pull request (PR) or merge, it automatically generates a preview channel in your Expo account.
 2. You don't need to run 'eas' commands every time you create a PR; the process is streamlined for you.
-3. The continuous delivery (CD) process is managed through the [preview.yml](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/.github/workflows/preview.yml) configuration file, which utilizes [expo-github-action](https://github.com/expo/expo-github-action).
+3. The continuous delivery (CD) process is managed through the [preview.yml](https://github.com/wataru-maeda/react-native-template/blob/main/.github/workflows/preview.yml) configuration file, which utilizes [expo-github-action](https://github.com/expo/expo-github-action).
 
 To set up the CD workflow, follow these steps:
 1. Create an `EXPO_TOKEN` in your Expo account. You can do this by visiting [this link](https://expo.dev/accounts/%5Baccount%5D/settings/access-tokens).
 2. In your GitHub repository, go to **Settings**, then navigate to **Secrets and variables** -> **Actions** -> **Add new repository secret**. Make sure to name the secret as `EXPO_TOKEN`.
-3. Update `name`, `slug`, `owner`, `projectId` and `url` in [app.json](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/app.json):
-4. Update in `name`, `slug`, `projectId`, `ios`, `android` in [app.config.ts](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/app.config.ts)
+3. Update `name`, `slug`, `owner`, `projectId` and `url` in [app.json](https://github.com/wataru-maeda/react-native-template/blob/main/app.json):
+4. Update in `name`, `slug`, `projectId`, `ios`, `android` in [app.config.ts](https://github.com/wataru-maeda/react-native-template/blob/main/app.config.ts)
 6. After you push changes to the main branch, a new preview will be created automatically.
 
 </details>
@@ -297,4 +297,4 @@ To generate iOS and Android native code, you can run `npx expo prebuild` in the 
 
 ## 📓 License
 
-This project is available under the MIT license. See the [LICENSE](https://github.com/wataru-maeda/react-native-boilerplate/blob/main/LICENSE) file for more info.
+This project is available under the MIT license. See the [LICENSE](https://github.com/wataru-maeda/react-native-template/blob/main/LICENSE) file for more info.

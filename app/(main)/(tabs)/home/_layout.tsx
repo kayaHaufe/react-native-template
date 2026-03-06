@@ -13,7 +13,7 @@ export default function HomeStackLayout() {
     <Stack
       screenOptions={{
         headerTintColor: colors.white,
-        headerStyle: { backgroundColor: isDark ? colors.blackGray : colors.darkPurple },
+        headerStyle: { backgroundColor: isDark ? colors.blackGray : colors.magent },
         headerTitleStyle: { fontSize: 18 },
       }}>
       <Stack.Screen
@@ -25,7 +25,7 @@ export default function HomeStackLayout() {
           headerTitleAlign: 'center',
         }}
       />
-      <Stack.Screen name="details" options={{ title: 'Details' }} />
+      <Stack.Screen name="details" options={{ title: 'Detalhes' }} />
     </Stack>
   );
 }
