@@ -36,9 +36,9 @@ export default function Home() {
   const { isDark } = useColorScheme();
   return (
     <View style={[styles.root, isDark && { backgroundColor: colors.blackGray }]}>
-      <Text style={[styles.title, isDark && { color: colors.gray }]}>Home</Text>
+      <Text style={[styles.title, isDark && { color: colors.gray }]}>Prof. Haufe</Text>
       <Button
-        title="Go to Details"
+        title="Detalhes"
         titleStyle={[styles.buttonTitle, isDark && { color: colors.blackGray }]}
         style={styles.button}
         onPress={() =>

@@ -18,7 +18,7 @@ export default function DrawerContents() {
   return (
     <SafeAreaView>
       <View style={[styles.root, isDark && { backgroundColor: colors.blackGray }]}>
-        <Text style={{ color: isDark ? colors.white : colors.black }}>Side Menu Contents</Text>
+        <Text style={{ color: isDark ? colors.white : colors.black }}>Conteúdo do Menu Lateral</Text>
       </View>
     </SafeAreaView>
   );

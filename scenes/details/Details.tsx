@@ -37,9 +37,9 @@ export default function Details() {
   return (
     <View style={[styles.root, isDark && { backgroundColor: colors.blackGray }]}>
       <Text
-        style={[styles.title, isDark && { color: colors.gray }]}>{`Details (from ${from})`}</Text>
+        style={[styles.title, isDark && { color: colors.gray }]}>Detalhes</Text>
       <GradientButton
-        title="Go back to Home"
+        title="Voltar para a Home"
         titleStyle={[styles.buttonTitle, isDark && { color: colors.blackGray }]}
         style={styles.button}
         gradientBackgroundProps={{

@@ -36,9 +36,9 @@ export default function Profile() {
   const { isDark } = useColorScheme();
   return (
     <View style={[styles.root, isDark && { backgroundColor: colors.blackGray }]}>
-      <Text style={[styles.title, isDark && { color: colors.gray }]}>Profile</Text>
+      <Text style={[styles.title, isDark && { color: colors.gray }]}>Perfil</Text>
       <Button
-        title="Go to Details"
+        title="Ir para Detalhes"
         titleStyle={[styles.buttonTitle, isDark && { color: colors.blackGray }]}
         style={styles.button}
         onPress={() =>
