@@ -52,18 +52,18 @@ export default function Home() {
       progress: 0.55,
     },
     {
-      title: 'Gestão de TCC',
-      subtitle: 'Projeto exemplo',
-      description: 'Acompanhamento de etapas, entregas, orientação e banca.',
-      icon: 'clipboard-text',
-      progress: 0.92,
-    },
-    {
       title: 'Protótipo',
       subtitle: 'Projeto exemplo',
       description: 'Telas do aplicativo',
       icon: 'book-education',
       progress: 1,
+    },
+    {
+      title: 'Gestão de TCC',
+      subtitle: 'Projeto exemplo',
+      description: 'Acompanhamento de etapas, entregas, orientação e banca.',
+      icon: 'clipboard-text',
+      progress: 0.92,
     },
   ];
 
