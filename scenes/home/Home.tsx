@@ -221,7 +221,7 @@ export default function Home() {
         </Card>
 
         <Text variant="titleLarge" style={styles.sectionTitle}>
-          Módulos que os alunos podem usar como base
+          Módulos de Exemplo
         </Text>
 
         {filteredProjects.map((item) => (
