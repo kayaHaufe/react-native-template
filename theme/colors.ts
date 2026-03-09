@@ -1,7 +1,7 @@
 export const colors = {
   magent: '#FF0049',
   purple: '#8100ff',
-  lightGrayPurple: '#f7f7fb',
+  lightGray: '#f7f7fb',
   pink: '#ff3d69',
   gray: '#797777',
   blackGray: '#101212',
