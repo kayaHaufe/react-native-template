@@ -32,6 +32,8 @@ type ProjectCard = {
   progress: number;
 };
 
+type ActiveModal = null | 'sobre' | 'ideia' | 'projeto';
+
 export default function Home() {
   const router = useRouter();
   const { isDark } = useColorScheme();
@@ -39,9 +41,9 @@ export default function Home() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [menuVisible, setMenuVisible] = useState(false);
-  const [modalVisible, setModalVisible] = useState(false);
   const [snackbarVisible, setSnackbarVisible] = useState(false);
   const [segment, setSegment] = useState('todos');
+  const [activeModal, setActiveModal] = useState<ActiveModal>(null);
 
   const projects: ProjectCard[] = [
     {
@@ -74,7 +76,7 @@ export default function Home() {
 
     if (segment === 'todos') return matchesSearch;
     if (segment === 'andamento') return matchesSearch && item.progress < 1;
-    if (segment === 'concluidos') return matchesSearch && item.progress == 1;
+    if (segment === 'concluidos') return matchesSearch && item.progress === 1;
 
     return matchesSearch;
   });
@@ -107,11 +109,12 @@ export default function Home() {
             <Menu.Item
               onPress={() => {
                 setMenuVisible(false);
-                setModalVisible(true);
+                setActiveModal('sobre');
               }}
               title="Sobre o projeto"
               leadingIcon="information-outline"
             />
+
             <Menu.Item
               onPress={() => {
                 setMenuVisible(false);
@@ -159,8 +162,12 @@ export default function Home() {
               Explorar detalhes
             </Button>
 
-            <Button mode="outlined" icon="lightbulb-on-outline" onPress={() => setModalVisible(true)}>
-              Abrir um modal
+            <Button
+              mode="outlined"
+              icon="lightbulb-on-outline"
+              onPress={() => setActiveModal('ideia')}
+            >
+              Abrir modal de ideia
             </Button>
           </View>
         </Surface>
@@ -247,7 +254,10 @@ export default function Home() {
             </Card.Content>
 
             <Card.Actions>
-              <Button mode="text">Visualizar</Button>
+              <Button mode="text" onPress={() => setActiveModal('projeto')}>
+                Visualizar
+              </Button>
+
               <Button
                 mode="contained-tonal"
                 onPress={() => setSnackbarVisible(true)}
@@ -338,13 +348,12 @@ export default function Home() {
             Pronto para transformar isso em um TCC?
           </Text>
         </Surface>
-
       </ScrollView>
 
       <Portal>
         <Modal
-          visible={modalVisible}
-          onDismiss={() => setModalVisible(false)}
+          visible={activeModal === 'sobre'}
+          onDismiss={() => setActiveModal(null)}
           contentContainerStyle={styles.modalContainer}
         >
           <Text variant="headlineSmall" style={styles.modalTitle}>
@@ -352,14 +361,60 @@ export default function Home() {
           </Text>
 
           <Text variant="bodyMedium" style={styles.modalText}>
-            Modal aberto.
+            Esta tela foi criada como exemplo de dashboard para um app de TCC.
           </Text>
 
           <Text variant="bodyMedium" style={styles.modalText}>
-            Exemplo de uso.
+            Aqui você pode organizar cards, métricas, listas, busca e atalhos.
           </Text>
 
-          <Button mode="contained" onPress={() => setModalVisible(false)}>
+          <Button mode="contained" onPress={() => setActiveModal(null)}>
+            Fechar
+          </Button>
+        </Modal>
+
+        <Modal
+          visible={activeModal === 'ideia'}
+          onDismiss={() => setActiveModal(null)}
+          contentContainerStyle={styles.modalContainer}
+        >
+          <Text variant="headlineSmall" style={styles.modalTitle}>
+            Ideia de Projeto
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.modalText}>
+            Você pode adaptar este modelo para chamadas, TCC, biblioteca,
+            estoque, clínica, escola ou outro sistema.
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.modalText}>
+            Basta trocar os textos, os dados e as ações dos botões.
+          </Text>
+
+          <Button mode="contained" onPress={() => setActiveModal(null)}>
+            Fechar
+          </Button>
+        </Modal>
+
+        <Modal
+          visible={activeModal === 'projeto'}
+          onDismiss={() => setActiveModal(null)}
+          contentContainerStyle={styles.modalContainer}
+        >
+          <Text variant="headlineSmall" style={styles.modalTitle}>
+            Visualização do Projeto
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.modalText}>
+            Aqui você pode mostrar detalhes do módulo selecionado, objetivos,
+            funcionalidades e tecnologias usadas.
+          </Text>
+
+          <Text variant="bodyMedium" style={styles.modalText}>
+            Depois, se quiser, pode transformar isso em uma tela separada.
+          </Text>
+
+          <Button mode="contained" onPress={() => setActiveModal(null)}>
             Fechar
           </Button>
         </Modal>
