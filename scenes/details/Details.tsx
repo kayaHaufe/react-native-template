@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.lightGrayPurple,
+    backgroundColor: colors.lightGray,
   },
   title: {
     fontSize: 24,

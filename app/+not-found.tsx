@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: colors.lightGrayPurple,
+    backgroundColor: colors.lightGray,
   },
   link: {
     paddingVertical: 8,
